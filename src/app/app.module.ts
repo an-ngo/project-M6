@@ -38,6 +38,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { HomeComponent } from './pages/home/home.component';
 
 export const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
@@ -47,7 +48,7 @@ export const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, LoginComponent, UserAccountComponent, UploadAvatarComponent, ChangeAvatarComponent ],
+  declarations: [AppComponent, RegisterComponent, LoginComponent, UserAccountComponent, UploadAvatarComponent, ChangeAvatarComponent, HomeComponent ],
   imports: [
     FormsModule,
     HttpClientModule,
