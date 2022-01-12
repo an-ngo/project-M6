@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
     message: 'no_email'
   };
   success: any = {
-    message: 'yes'
+    message: 'success'
   };
   status = 'Please fill in the form to Register!';
 
@@ -38,16 +38,17 @@ export class RegisterComponent implements OnInit {
       this.form.name,
       this.form.username,
       this.form.email,
+      this.form.phone,
       this.form.password
     );
     this.authService.signUp(this.signUpForm).subscribe(data => {
-      if (JSON.stringify(data) == JSON.stringify(this.error1)) {
+      if (JSON.stringify(data) === JSON.stringify(this.error1)) {
         this.status = 'The username is existed! Please try!';
       }
-      if (JSON.stringify(data) == JSON.stringify(this.error2)) {
+      if (JSON.stringify(data) === JSON.stringify(this.error2)) {
         this.status = 'The email is existed! Please try!';
       }
-      if (JSON.stringify(data) == JSON.stringify(this.success)) {
+      if (JSON.stringify(data) === JSON.stringify(this.success)) {
         this.status = 'Create account success!';
       }
     });

@@ -4,7 +4,7 @@
             <mat-card style="margin: 50px 0">
                 <form class="form-register" #f="ngForm" (ngSubmit)="f.form.valid &&ngSubmit()" novalidate>
                     <mat-error class="alert alert-primary">{{status}}</mat-error>
-                    <!--NAME -->
+<!--                    NAME-->
                     <mat-form-field style="width: 350px" appearance="outline">
                         <mat-label>Name</mat-label>
                         <input matInput placeholder="Name .." name="name" [(ngModel)]="form.name" #name="ngModel" minlength="3" maxlength="50" required>
@@ -27,6 +27,13 @@
                         <mat-icon color="accent" matSuffix>email</mat-icon>
                         <mat-error *ngIf="emailFormControl.hasError('required')">The username is required!</mat-error>
                         <mat-error *ngIf="emailFormControl.hasError('email')">The email invalid! Please try -> Ex: dinhbede@gmail.com</mat-error>
+                    </mat-form-field><br>
+                    <!--PHONE-->
+                    <mat-form-field style="width: 350px" appearance="outline">
+                        <mat-label>Phone: </mat-label>
+                        <input matInput placeholder="Phone ..." name="phone" [(ngModel)]="form.phone" #phone="ngModel" required>
+                        <mat-icon color="accent" matSuffix>account_circle</mat-icon>
+                        <mat-error *ngIf="phone.hasError('required')">Phone number field is empty, please fill in!</mat-error>
                     </mat-form-field><br>
                     <mat-form-field style="width: 350px" appearance="outline">
                         <mat-label>Enter your password</mat-label>
