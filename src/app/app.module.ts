@@ -44,11 +44,21 @@ export const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   {path: 'user-account', component: UserAccountComponent},
-  {path: 'change-avatar', component: ChangeAvatarComponent}
+  {path: 'change-avatar', component: ChangeAvatarComponent},
+  {path: '' , component: HomeComponent}
 ];
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, LoginComponent, UserAccountComponent, UploadAvatarComponent, ChangeAvatarComponent, HomeComponent ],
+
+  declarations: [
+    AppComponent,
+    RegisterComponent,
+    LoginComponent,
+    UserAccountComponent,
+    UploadAvatarComponent,
+    ChangeAvatarComponent,
+    HomeComponent
+  ],
   imports: [
     FormsModule,
     HttpClientModule,
