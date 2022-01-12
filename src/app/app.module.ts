@@ -12,8 +12,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 
-import { HomeComponent } from './pages/home/home.component';
-import { GettingStartedComponent } from './pages/gettingstarted/gettingstarted.component';
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { NgxAudioPlayerModule } from 'projects/ngx-audio-player/src/public_api';
@@ -34,32 +33,21 @@ import { UploadAvatarComponent } from './upload/upload-avatar/upload-avatar.comp
 import {httpInterceptorProvider} from './secuirty/auth.interceptor';
 import { ChangeAvatarComponent } from './manage-profile/change-avatar/change-avatar.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { CreateCategoryComponent } from './categoryManage/create-category/create-category.component';
-import { ListCategoryComponent } from './categoryManage/list-category/list-category.component';
+
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
-import { UpdateCategoryComponent } from './categoryManage/update-category/update-category.component';
-import { DialogComponent } from './categoryManage/dialog/dialog.component';
+
 import {MatDialogModule} from '@angular/material/dialog';
 
 export const appRoutes: Routes = [
-  { path: '', component: HomeComponent, data: { title: 'Home' } },
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   {path: 'user-account', component: UserAccountComponent},
-  {path: 'change-avatar', component: ChangeAvatarComponent},
-  {path: 'create-category', component: CreateCategoryComponent},
-  {path: 'list-category', component: ListCategoryComponent},
-  {path: 'update-category/:id', component: UpdateCategoryComponent},
-  {
-    path: 'guide/getting-started',
-    component: GettingStartedComponent,
-    data: { title: 'Getting Started' }
-  }
+  {path: 'change-avatar', component: ChangeAvatarComponent}
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GettingStartedComponent, RegisterComponent, LoginComponent, UserAccountComponent, UploadAvatarComponent, ChangeAvatarComponent, CreateCategoryComponent, ListCategoryComponent, UpdateCategoryComponent, DialogComponent],
+  declarations: [AppComponent, RegisterComponent, LoginComponent, UserAccountComponent, UploadAvatarComponent, ChangeAvatarComponent ],
   imports: [
     FormsModule,
     HttpClientModule,
