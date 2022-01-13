@@ -39,13 +39,15 @@ import {MatTableModule} from '@angular/material/table';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import { HomeComponent } from './pages/home/home.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 export const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   {path: 'user-account', component: UserAccountComponent},
   {path: 'change-avatar', component: ChangeAvatarComponent},
-  {path: '' , component: HomeComponent}
+  // {path: '' , component: HomeComponent},
+  {path: '' , component: AppComponent}
 ];
 
 @NgModule({
@@ -57,7 +59,7 @@ export const appRoutes: Routes = [
     UserAccountComponent,
     UploadAvatarComponent,
     ChangeAvatarComponent,
-    HomeComponent
+    // HomeComponent
   ],
   imports: [
     FormsModule,
@@ -69,6 +71,7 @@ export const appRoutes: Routes = [
     MatRadioModule,
     MatCheckboxModule,
     MatSlideToggleModule,
+    ReactiveFormsModule,
     MatButtonModule,
     BrowserAnimationsModule,
     NavBarModule, FooterModule,
@@ -77,7 +80,7 @@ export const appRoutes: Routes = [
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     // tslint:disable-next-line:max-line-length
-    RouterModule.forRoot(appRoutes, {useHash: false}), MatFormFieldModule, ReactiveFormsModule, MatProgressSpinnerModule, MatPaginatorModule, MatTableModule, MatDialogModule
+    RouterModule.forRoot(appRoutes, {useHash: false}), MatFormFieldModule, ReactiveFormsModule, MatProgressSpinnerModule, MatPaginatorModule, MatTableModule, MatDialogModule, MatProgressBarModule
   ],
   providers: [httpInterceptorProvider],
   bootstrap: [AppComponent]
