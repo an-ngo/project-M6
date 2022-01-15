@@ -38,16 +38,20 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 
 import {MatDialogModule} from '@angular/material/dialog';
-import { HomeComponent } from './pages/home/home.component';
+// import { HomeComponent } from './pages/home/home.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { UploadFileComponent } from './test/upload-file/upload-file.component';
+import { CreateComponent } from './provider/create/create.component';
+
 
 export const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   {path: 'user-account', component: UserAccountComponent},
   {path: 'change-avatar', component: ChangeAvatarComponent},
-  // {path: '' , component: HomeComponent},
-  {path: '' , component: AppComponent}
+  // {path: '' , component: HomeComponent}
+  {path: '' , component: AppComponent},
+  {path: 'test', component: UploadFileComponent}
 ];
 
 @NgModule({
@@ -59,6 +63,8 @@ export const appRoutes: Routes = [
     UserAccountComponent,
     UploadAvatarComponent,
     ChangeAvatarComponent,
+    UploadFileComponent,
+    CreateComponent,
     // HomeComponent
   ],
   imports: [
@@ -71,7 +77,6 @@ export const appRoutes: Routes = [
     MatRadioModule,
     MatCheckboxModule,
     MatSlideToggleModule,
-    ReactiveFormsModule,
     MatButtonModule,
     BrowserAnimationsModule,
     NavBarModule, FooterModule,

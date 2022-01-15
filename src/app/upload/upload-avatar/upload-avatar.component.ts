@@ -14,6 +14,7 @@ export class UploadAvatarComponent implements OnInit {
   checkUploadFile = false;
   @Output()
   giveURLtoCreate = new EventEmitter<string>();
+  isInfo: any;
   constructor(private afStorage: AngularFireStorage) { }
 
   ngOnInit(): void {
